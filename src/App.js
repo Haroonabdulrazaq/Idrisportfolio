@@ -1,9 +1,10 @@
+import About from './components/about/About';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      App dotjs
+      <About/>
     </div>
   );
 }
