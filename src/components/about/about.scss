@@ -1,9 +1,129 @@
+@import "../../assets/stylesheets/flexPoint.scss";
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+* {
+  box-sizing: border-box;
+}
 .about-wrapper {
   font-family: Overlock;
+  min-height: 100vh;
   height: auto;
 
   .banner {
     height: 85vh;
-    border: 1px solid chartreuse;
+    background: $black;
+    opacity: 0.8;
+    @include flexPoint(row, center);
+    @include responsive(tab)  {
+      height: 95vh;
+    }
+    .banner-text {
+      padding: 2rem;
+      font-size: 3.8rem;
+      color: $white;
+      text-align: center;
+      @include responsive(tab)  {
+        width: 60%;
+      }
+      @include responsive(desktop)  {
+        width: 50%;
+      }
+    }
+  }
+
+  .tier-heading {
+    text-transform: capitalize;
+    color: $very-grey;
+    font-family: 'Rationale', sans-serif;
+    font-weight: 400;
+  }
+  .main-parent {
+    @include responsive(tab) {
+      padding: 3rem;
+    }
+    @include responsive(desktop) {
+      padding: 5rem;
+    }
+    @include responsive(large-screen) {
+      padding: 7rem;
+    }
+    .three-tier {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      @include responsive(tab) {
+        min-height: 100vh;
+        width: 100%;
+        flex-direction: row;
+      }
+      .tier {
+        width: 100%;
+        min-height: 100vh;
+        // height: 100vh;
+        // border: 1px solid blue;
+        @include responsive(tab) {
+          padding: 0 1.5rem;
+        }
+      }
+      .image-desc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: flex-start;
+        // align-items: center;
+        border: 1px solid chartreuse;
+        .image {
+          width: 100%;
+          height: 100%;
+          .idris-dubai-img {
+            border: 1px solid blue;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .desc-text {
+          font-size: 1.5rem;
+          color: $more-grey;
+          padding: 1rem;
+        }
+      }
+      .text-desc {
+        border-top: 1px solid $very-grey;
+        padding: 0 1.5rem;
+        font-size: 1.5rem;
+        @include responsive(tab) {
+          font-size: 1.5rem;
+          line-height: 2;
+          border-top: none;
+          
+          h2 {
+            text-transform: capitalize;
+            color: $very-grey;
+            font-family: 'Rationale', sans-serif;
+            font-weight: 400;
+          }
+          div {
+            line-height: 1.7;
+            text-align: center;
+            color: $more-grey;
+            text-align: left;
+          }
+        }
+      }
+      .capabilities {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(tab) {
+          //Reduce the height of capability on mobile view
+        }
+      }
+    }
   }
 }
