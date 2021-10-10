@@ -53,43 +53,46 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       padding: 1.5rem;
       @include responsive(tab) {
-        min-height: 100vh;
+        height: auto;
         width: 100%;
         flex-direction: row;
       }
       .tier {
         width: 100%;
-        min-height: 100vh;
-        // height: 100vh;
-        // border: 1px solid blue;
         @include responsive(tab) {
           padding: 0 1.5rem;
         }
       }
       .image-desc {
-        width: 100%;
-        height: 100%;
+        padding: 0;
         display: flex;
         flex-direction: column;
-        // justify-content: flex-start;
-        // align-items: center;
-        border: 1px solid chartreuse;
-        .image {
+        align-items: center;
+        .desc-img {
+          height: 80vh;
           width: 100%;
-          height: 100%;
-          .idris-dubai-img {
-            border: 1px solid blue;
-            width: 100%;
-            height: 100%;
+          background: url("../../assets/images/Idrisdubai.jpeg") no-repeat;
+          background-position: center;
+          background-size: cover;
+          background-clip: padding-box;
+          @include responsive(tab) {
+            height: 50vh;
           }
         }
         .desc-text {
-          font-size: 1.5rem;
-          color: $more-grey;
-          padding: 1rem;
+          display: none;
+         @include responsive(tab) {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+        }
+        @include responsive(desktop) {
+          width: 100%;
+          padding: 0;
+        }
         }
       }
       .text-desc {
@@ -119,9 +122,20 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        min-height: 50vh;
+        padding: 0 1.5rem;
+        font-size: 1.5rem;
         @include responsive(tab) {
-          //Reduce the height of capability on mobile view
+          font-size: 1rem;
+          align-items: center;
+          margin-bottom: 2rem;
+        }
+        .cap {
+          margin: 2rem 0;
+          @include responsive(tab) {
+            width: 50%;
+            margin: 0 auto;
+          }
         }
       }
     }

@@ -12,13 +12,10 @@ const About = () => {
       </header>
       <main className="main-parent">
         <div className="three-tier">
-          
-          <article className="tier text-desc">
-            <h2>
-              About Jimoh Idris
-            </h2>
-            <div>
-              {aboutData.about}
+          <article className="tier image-desc">
+            <div className="desc-img"></div>
+            <div className="desc-text">
+             {aboutData.dress}
             </div>
           </article>
           <article className="tier text-desc">
@@ -30,20 +27,20 @@ const About = () => {
             </div>
           </article>
           <article className="tier capabilities">
-            <div className="digital-capabilities">
+            <div className="cap digital-capabilities">
               <h2 className="tier-heading" > Digital Capabilities </h2>
-              {aboutData.digital.map((capability)=> {
-                return (<div className="capability">
+              {aboutData.digital.map((capability, index)=> {
+                return (<div className="capability" key={index}>
                   <p>{capability}</p>
                 </div>)
               })}
             </div>
-            <div className="clients">
-              <h2 className="tier-heading "> Clients and collaborators </h2>
+            <div className="cap clients">
+              <h2 className="tier-heading"> Clients and collaborators </h2>
               <div className="digital-capabilities">
-                {aboutData.digital.map((capability)=> {
-                  return (<div className="capability">
-                    <p>{capability}</p>
+                {aboutData.clients.map((client, index)=> {
+                  return (<div className="capability" key={index}   >
+                    <p>{client}</p>
                   </div>)
                 })}
               </div>
