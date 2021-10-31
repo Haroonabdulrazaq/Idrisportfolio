@@ -7,6 +7,21 @@ const aboutData = {
   dress: "I don't usually dress like this but I'm rather proud of this moment in my personal history so in the bio it goes. If you want to play PES or FIFA, see a movie, or grab a drink and talk design don't hesitate to engage me via mail or tweet.",
   digital: ["Websites", "iOS and Android Apps", "Strategy", "Research", "E-commerce Design"],
   clients:["Fluenttera LLC", "Zanahary Inc", "Terrachow", "Integr8", "Allin", "ScreenRev", "Buypower NG", "Tizeti"],
+  testimonies: [
+    {
+      text: "“I’ve had the pleasure of working with Jimoh on a fast-moving project that has greatly benefited from his talents. Jimoh is an intelligent, creative, team-oriented, and highly-conscientious designer, and he has quickly become one of my favorite collaborators.”",
+      name: "CHARLES NJOKU",
+      position: "DIRECTOR OF OPERATIONS, FLUENTTERA LLC",
+    },
+    {
+      text: "“Jimoh Idris did a wonderful job creating some initial screens for a product we are about to launch. He is sharp, proactive, and superbly timely. it's a pleasure to recommend him to others as a dedicated professional.”",
+      name: "HABEEB ABDULRAHMAN",
+      position: "FULLSTACK DEVELOPER",
+    },
+
+
+  ]
+
 }
 
 export default aboutData;

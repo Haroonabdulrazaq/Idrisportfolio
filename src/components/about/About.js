@@ -1,6 +1,6 @@
 import React from 'react';
+import Testimony from "./Testimony";
 import aboutData from './data';
-// import idrisdubai from '../../assets/images/Idrisdubai.jpeg';
 import "./about.scss";
 
 
@@ -47,6 +47,7 @@ const About = () => {
             </div>
           </article>
         </div>
+        <Testimony testimonies={aboutData.testimonies} />
       </main>
     </div>
   )
