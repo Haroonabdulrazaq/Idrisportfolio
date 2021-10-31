@@ -6,6 +6,17 @@
   margin: 2rem;
   padding: 2rem;
   font-size: medium;
+  display: flex;
+  flex-direction: column;
+  
+  @include responsive(tab){
+    flex-direction: row;
+  }
+}
+@include responsive(tab) {
+  .contact > * {
+    margin: 2rem;
+  }
 }
 
 .work-together {
@@ -16,4 +27,11 @@
 .icons{
   color: $more-grey;
   cursor: pointer;
+  a{
+    color: $more-grey;
+  }
+  a:hover{
+    color: $more-grey;
+    text-decoration: none;
+  }
 }
