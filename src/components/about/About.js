@@ -1,5 +1,6 @@
 import React from 'react';
 import Testimony from "./Testimony";
+import Contact from "./Contact";
 import aboutData from './data';
 import "./about.scss";
 
@@ -8,7 +9,9 @@ const About = () => {
   return (
     <div className="about-wrapper">
       <header className="banner">
-        <h1 className="banner-text">{aboutData.heading}</h1>
+        <div className="banner-text">
+          <h1>{aboutData.heading}</h1>
+        </div>
       </header>
       <main className="main-parent">
         <div className="three-tier">
@@ -48,6 +51,7 @@ const About = () => {
           </article>
         </div>
         <Testimony testimonies={aboutData.testimonies} />
+        <Contact/>
       </main>
     </div>
   )

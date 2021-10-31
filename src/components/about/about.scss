@@ -13,21 +13,39 @@
   .banner {
     height: 85vh;
     background: $black;
+    background: url("../../assets/images/Jimoh-banner.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: padding-box;
     opacity: 0.8;
     @include flexPoint(row, center);
     @include responsive(tab)  {
       height: 95vh;
     }
     .banner-text {
-      padding: 2rem;
-      font-size: 3.8rem;
-      color: $white;
-      text-align: center;
+      border: 1px solid chartreuse;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      height: inherit;
+      opacity: 0.9;
+      display: flex;
       @include responsive(tab)  {
-        width: 60%;
+        width: 100%;
       }
       @include responsive(desktop)  {
-        width: 50%;
+        width: 100%;
+      }
+      h1{
+        padding: 2rem;
+        font-size: 3rem;
+        color: $white;
+        align-self: center;
+        @include responsive(tab)  {
+          font-size: 3.8rem;
+          width: 100%;
+        }
       }
     }
   }

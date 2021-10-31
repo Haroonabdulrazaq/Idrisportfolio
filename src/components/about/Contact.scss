@@ -1,0 +1,19 @@
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+
+.contact{
+  margin: 2rem;
+  padding: 2rem;
+  font-size: medium;
+}
+
+.work-together {
+  color: $very-grey;
+  text-transform: uppercase;
+}
+
+.icons{
+  color: $more-grey;
+  cursor: pointer;
+}
