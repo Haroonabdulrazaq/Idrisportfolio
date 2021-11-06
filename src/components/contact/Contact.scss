@@ -1,0 +1,77 @@
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+ $light-black-background:#131111;
+ $black-background:#070707;
+
+.contact-wrapper {
+  background: $black-background;
+  min-height: auto;
+}
+
+.top-contact {
+  min-height: 80vh;
+  background: $light-black-background;
+}
+
+.bottom-contact {
+  // border: 1px solid chartreuse;
+  height: auto;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .hello-text {
+    // border: 1px solid goldenrod;
+    background: url("../../assets/images/contact-bg.jpeg") no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-clip: padding-box;
+    width: 100%;
+    min-height: inherit;
+
+    @include responsive(tab) {
+      width: 75%;
+      flex-direction: row;
+      background-position: center;
+    }
+
+    .letters {
+      // border: 1px solid cornflowerblue;
+      position: relative;
+      .letter {
+        position: absolute;
+        font-family: 'Roboto Slab', serif;
+        font-size: 4rem;
+        line-height: 1.8;
+        font-weight: 400;
+        color: white;
+        @include responsive(tab) {
+          font-size: 10rem;
+        }
+      }
+      .H {
+        top: 25vh;
+        left: 5vw;
+      }
+      .E {
+        top: 25vh;
+        left: 18vw;
+      }
+      .L1 {
+        top: 25vh;
+        left: 38vw;
+      }
+    }
+  }
+  .social-icons {
+    // border: 1px solid fuchsia;
+    background: $black-background;
+    width: 100%;
+    min-height: 30vh;
+    @include responsive(tab)  {
+      width: 35%;
+    }
+  }
+}
