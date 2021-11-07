@@ -44,7 +44,6 @@
         position: absolute;
         font-family: 'Roboto Slab', serif;
         font-size: 4rem;
-        line-height: 1.8;
         font-weight: 400;
         color: white;
         @include responsive(tab) {
@@ -60,8 +59,38 @@
         left: 18vw;
       }
       .L1 {
-        top: 25vh;
+        top: 27vh;
         left: 38vw;
+      }
+      .L2 {
+        top: 35vh;
+        left: 48vw;
+      }
+      .O {
+        top: 40vh;
+        left: 58vw;
+      }
+      @include responsive(tab){
+        .H {
+          top: 10vh;
+          left: 5vw;
+        }
+        .E {
+          top: 10vh;
+          left: 15vw;
+        }
+        .L1 {
+          top: 12vh;
+          left: 25vw;
+        }
+        .L2 {
+          top: 20vh;
+          left: 38vw;
+        }
+        .O {
+          top: 23vh;
+          left: 45vw;
+        }
       }
     }
   }
@@ -72,6 +101,7 @@
     min-height: 30vh;
     @include responsive(tab)  {
       width: 35%;
+      min-height: 0vh;
     }
   }
 }

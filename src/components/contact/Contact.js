@@ -18,8 +18,8 @@ const Contact = () => {
             <span className="letter H">H</span>
             <span className="letter E">E</span>
             <span className="letter L1">L</span>
-            {/* <span className="letter L2">L</span>
-            <span className="letter O">O</span> */}
+            <span className="letter L2">L</span>
+            <span className="letter O">O</span>
           </div>
         </div>
         <div className="social-icons"></div>
