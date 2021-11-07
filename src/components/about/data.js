@@ -20,7 +20,11 @@ const aboutData = {
     },
 
 
-  ]
+  ],
+  communication: `Communication is the basis of all design processes
+  I am good at that and you can be rest assured 
+  of asking questions to clear any doubts. 
+  Need something to work on or help you with? Engage!`,
 
 }
 
