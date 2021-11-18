@@ -1,13 +1,12 @@
 import React from 'react'; 
 import aboutData from "../about/data";
+import Footer from "./Footer";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
-import { AiFillBehanceSquare, AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
-import { BsFillEmojiSmileFill } from "react-icons/bs";
 import { MdWavingHand } from "react-icons/md";
-import { Link } from "react-router-dom";
+
 import "./Contact.scss";
 
 const useStyles = makeStyles({
@@ -81,35 +80,9 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="bottom-contact">
-        <div className="hello-text">
-          <div className="letters">
-            <span className="letter H">H</span>
-            <span className="letter E">E</span>
-            <span className="letter L1">L</span>
-            <span className="letter L2">L</span>
-            <span className="letter O">O</span>
-          </div>
-        </div>
-        <div className="social-icons">
-          <p>LET'S WORK TOGETHER</p>
-          <div className="social-connect-icons">
-            <Link to="http://twitter.com/frabjous_id" target="_blank"><AiFillBehanceSquare /></Link>
-            <Link to="http://twitter.com/frabjous_id" target="_blank"><AiFillTwitterCircle/></Link>
-            <Link to="http://linkedin.com/in/jimoh-idris-237931b4" target="_blank"><AiFillLinkedin /></Link>
-          </div>
-          <div className="contact-me">
-            <BsFillEmojiSmileFill className="smile"/>
-            <p>Contact me</p>
-            <MdWavingHand className="wave"/>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   )
 }
 
 export default Contact;
-
-
-// MuiInputBase-input

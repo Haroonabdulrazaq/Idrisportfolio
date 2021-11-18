@@ -11,19 +11,23 @@ const Navigation = () => {
   const [offset, setOffset] = useState(0);
   const [showNav, setShowNav] = useState(false);
 
-  useEffect(() => {
-    window.onscroll = () => {
-      setOffset(window.pageYOffset)
-    }
-  }, []);
-
   const handleNav =()=>{
     setShowNav(!showNav)
     if(offset < 20) {
       setShowNav(false)
     }
-
   }
+
+  useEffect(() => {
+    window.onscroll = () => {
+      setOffset(window.pageYOffset)
+    }
+    if(offset <= 20) {
+      setShowNav(false)
+    }
+  }, [offset]);
+
+
 
   return (
     <>
