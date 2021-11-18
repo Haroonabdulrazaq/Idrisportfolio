@@ -37,6 +37,11 @@
 
     .wave-hello {
       color: $orange;
+      cursor: pointer;
+    }
+    .wave-hello:hover {
+      transform: rotate(-60deg);
+      transition: all 0.8s ease-in-out;
     }
   }
 
@@ -224,6 +229,10 @@
         align-items: center;
         .wave {
           display: block;
+        }
+        .wave:hover {
+          transform: rotate(-60deg);
+          transition: all 0.8s ease-in-out;;
         }
       }
     }

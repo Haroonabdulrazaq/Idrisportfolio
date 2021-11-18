@@ -123,3 +123,63 @@
     }
   }
 }
+
+
+// Arrow up Animation
+.arrow-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  z-index: 3;
+  border-radius: 0.5rem;
+  background: $ash;
+  box-shadow: $shadow;
+  transform: scale(1);
+  animation: goUp 2s ease-in-out,
+             bounce 0.8s infinite alternate ease-in-out 2.5s;
+  -webkit-animation: goUp 2s ease-in-out,
+                     bounce 0.8s infinite alternate ease-in-out 2.5s;
+  @include responsive(tab) {
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+  }
+  @include responsive(large-screen) {
+    right: 5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.arrow-up:hover {
+  color: #000;
+}
+
+@keyframes goUp {
+  0% {
+    bottom: 80rem;
+    transform: scale(1.1);
+  }
+  50% {
+    bottom: 1rem;
+  }
+  100% {
+    bottom: 3rem;
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

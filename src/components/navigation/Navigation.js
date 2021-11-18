@@ -1,6 +1,7 @@
 import React, { useEffect,  useState} from 'react';
 import Nav from "./Nav";
-// import {AiOutlineLogout} from 'react-icons/ai';
+
+import {RiArrowUpSLine} from 'react-icons/ri';
 import {AiOutlineMenu} from 'react-icons/ai';
 import {AiFillCloseCircle} from 'react-icons/ai';
 
@@ -31,7 +32,7 @@ const Navigation = () => {
 
   return (
     <>
-      <section className={offset > 20 ?`nav-wrapper show-wrapper` : `nav-wrapper no-wrapper` }>
+      <section id="header-container" className={offset > 20 ?`nav-wrapper show-wrapper` : `nav-wrapper no-wrapper` }>
         <div className="mobile-wrapper">
           <div className="logo"></div>
           <div className="mobile-menu" onClick={handleNav}> {showNav? <AiFillCloseCircle style={{fontSize: '3.5rem'}}  />:  <AiOutlineMenu />} </div>
@@ -39,11 +40,12 @@ const Navigation = () => {
             <Nav setShowNav={setShowNav}/>
           </div>
         </div>
-      {showNav && offset > 20 && <div className="mobile-nav-display">
-        <div className="mobile-navigation">
-          <Nav setShowNav={setShowNav}/>
-        </div>
-      </div>}
+        {showNav && offset > 20 && <div className="mobile-nav-display">
+          <div className="mobile-navigation">
+            <Nav setShowNav={setShowNav}/>
+          </div>
+        </div>}
+        {true && <a href="#header-container" className="arrow-up"><RiArrowUpSLine /></a>}
       </section>
     </>
   )

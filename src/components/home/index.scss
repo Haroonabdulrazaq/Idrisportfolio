@@ -2,16 +2,15 @@
 @import "../../assets/stylesheets/utils.scss";
 
 .home-wrapper {
-  min-height: 150vh;
   height: auto;
+  min-height: 150vh;
 
   .banner {
     min-height: 100vh;
     height: auto;
     width: 100%;
     height: auto;
-    border: 1px solid chartreuse;
-    padding: 10rem 2rem 2rem 2rem;
+    padding: 10rem 2rem 2rem 2rem; 
 
     background: #000;
     position: relative;
@@ -24,10 +23,12 @@
       background-position: center;
       background-size: cover;
       background-clip: padding-box;
+
+      position: relative;
     }
 
     .banner-text {
-      min-height: 81vh;
+      min-height: 83vh;
       padding: 2rem;
       position: absolute;
       top: 15vh;
@@ -42,6 +43,28 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: flex-start;
+
+      .avatar {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 1.5rem;
+        background: url("../../assets/images/idris-avatar.png") no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-clip: padding-box;
+        // border: 1px solid chartreuse;
+      }
+      .wave {
+        font-size: 1.5rem;
+        color: $orange;
+        cursor: pointer;
+      }
+      .wave:hover {
+        transform: rotate(-60deg);
+        transition: all 0.8s ease-in-out;
+      }
 
       h3{
         font-size: 2.5rem;
@@ -79,17 +102,69 @@
     }
 
     .design-top {
-      top: 12vh;
-      left: 1vh;
+      top: -3vh;
+      left: -2vh;
       border-right: none;
       border-bottom: none;
     }
 
     .design-bottom {
-      bottom: 2vh;
-      right: 1vh;
+      bottom: -3vh;
+      right: -2vh;
       border-top: none;
       border-left: none;
     }
+
+    @include responsive(tab){
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 0;
+
+      .banner-text{
+        position: relative;
+        width: 60%;
+        top: 0;
+        padding-right: 10rem;
+      }
+      .banner-image{
+        position: relative;
+        width: 29%;
+      }
+    }
+  }
+
+  .banner-collaborators {
+    height: auto;
+    min-height: 50vh;
+    background: #000;
+    padding: 2rem;
+    
+    .few-brands {
+      text-align: center;
+      color: $very-grey;
+      font-size: 1.5rem;
+    }
+    .collaborators {
+      height: 40vh;
+      background: url("../../assets/images/collaborators.png") no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-clip: padding-box;
+    }
+
+    @include responsive(tab) {
+      .few-brands {
+        font-size: 2rem;
+      }
+      background: #131111;
+      padding: 5rem;
+    }
+  }
+
+  .projects {
+    height: 200vh;
+    border: 1px solid chartreuse;
   }
 }
