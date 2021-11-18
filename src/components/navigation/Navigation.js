@@ -1,14 +1,15 @@
 import React, { useEffect,  useState} from 'react';
-
+import Nav from "./Nav";
 // import {AiOutlineLogout} from 'react-icons/ai';
 import {AiOutlineMenu} from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import {AiFillCloseCircle} from 'react-icons/ai';
+
 
 import './navigation.scss';
 
 const Navigation = () => {
- 
   const [offset, setOffset] = useState(0);
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -16,19 +17,31 @@ const Navigation = () => {
     }
   }, []);
 
-  console.log("Gest",offset); 
+  const handleNav =()=>{
+    setShowNav(!showNav)
+    if(offset < 20) {
+      setShowNav(false)
+    }
+
+  }
+
   return (
-    <section className={offset > 100 ?`show-wrapper` : `no-wrapper` }>
-      <div className="mobile-wrapper">
-        <div className="logo"></div>
-        <div className="mobile-menu"> <AiOutlineMenu /> </div>
-        <div className="desktop-menu"> 
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+    <>
+      <section className={offset > 20 ?`nav-wrapper show-wrapper` : `nav-wrapper no-wrapper` }>
+        <div className="mobile-wrapper">
+          <div className="logo"></div>
+          <div className="mobile-menu" onClick={handleNav}> {showNav? <AiFillCloseCircle style={{fontSize: '3.5rem'}}  />:  <AiOutlineMenu />} </div>
+          <div className="desktop-menu"> 
+            <Nav setShowNav={setShowNav}/>
+          </div>
         </div>
-      </div>
-    </section>
+      {showNav && offset > 20 && <div className="mobile-nav-display">
+        <div className="mobile-navigation">
+          <Nav setShowNav={setShowNav}/>
+        </div>
+      </div>}
+      </section>
+    </>
   )
 }
 
