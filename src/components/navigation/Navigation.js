@@ -1,7 +1,8 @@
 import React, { useEffect,  useState} from 'react';
 import Nav from "./Nav";
+import ArrowUp from "../Footer/ArrowUp";
 
-import {RiArrowUpSLine} from 'react-icons/ri';
+
 import {AiOutlineMenu} from 'react-icons/ai';
 import {AiFillCloseCircle} from 'react-icons/ai';
 
@@ -28,7 +29,7 @@ const Navigation = () => {
     }
   }, [offset]);
 
-
+console.log("Show ME the Navigation", showNav);
 
   return (
     <>
@@ -45,7 +46,7 @@ const Navigation = () => {
             <Nav setShowNav={setShowNav}/>
           </div>
         </div>}
-        {true && <a href="#header-container" className="arrow-up"><RiArrowUpSLine /></a>}
+        {offset > 20?  <ArrowUp /> : null}
       </section>
     </>
   )
