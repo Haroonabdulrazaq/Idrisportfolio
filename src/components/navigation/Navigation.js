@@ -29,11 +29,9 @@ const Navigation = () => {
     }
   }, [offset]);
 
-console.log("Show ME the Navigation", showNav);
-
   return (
     <>
-      <section id="header-container" className={offset > 20 ?`nav-wrapper show-wrapper` : `nav-wrapper no-wrapper` }>
+      <section className={offset > 20 ?`nav-wrapper show-wrapper` : `nav-wrapper no-wrapper` }>
         <div className="mobile-wrapper">
           <div className="logo"></div>
           <div className="mobile-menu" onClick={handleNav}> {showNav? <AiFillCloseCircle style={{fontSize: '3.5rem'}}  />:  <AiOutlineMenu />} </div>
@@ -53,5 +51,3 @@ console.log("Show ME the Navigation", showNav);
 }
 
 export default Navigation;
-// GiHamburgerMenu
-// AiOutlineMenu

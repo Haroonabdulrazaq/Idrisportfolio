@@ -7,7 +7,7 @@ import "./about.scss";
 
 const About = () => {
   return (
-    <div className="about-wrapper">
+    <div className="about-wrapper"  id="header-container">
       <header className="banner">
         <div className="banner-text">
           <h1>{aboutData.heading}</h1>

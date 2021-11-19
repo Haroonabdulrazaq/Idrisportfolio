@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 const Contact = () => {
   const classes = useStyles();
   return (
-    <div className="contact-wrapper">
+    <div className="contact-wrapper"  id="header-container">
       <div className="top-contact">
         <div className="top-contact-text">
           <h2 className="say-hello">Say Hello <MdWavingHand className="wave-hello"/></h2>

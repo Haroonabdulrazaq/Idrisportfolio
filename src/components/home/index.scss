@@ -1,6 +1,11 @@
 @import "../../assets/stylesheets/mediaQuery.scss";
 @import "../../assets/stylesheets/utils.scss";
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 .home-wrapper {
   height: auto;
   min-height: 150vh;
@@ -164,7 +169,71 @@
   }
 
   .projects {
-    height: 200vh;
-    border: 1px solid chartreuse;
+    height: auto;
+    min-height: 200vh;
+    // border: 1px solid chartreuse;
+    .project {
+      height: auto;
+      min-height: 50vh;
+      background-position: center;
+      background-size: cover;
+      background-clip: padding-box;
+      position: relative;
+
+      @include responsive(tab) {
+        min-height: 70vh;
+      }
+      .project-text {
+        min-height: inherit;
+        width: 60%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 5rem 2rem;
+        font-size: 1rem;
+        color: white;
+        h3{
+          font-size: 1.7rem;
+        }
+        .view-case {
+          text-decoration: none;
+          padding: 1rem 1.5rem;
+          border: 1px solid white;
+          color: white;
+          text-transform: uppercase;
+          font-size: 1rem;
+        }
+
+        @include responsive(tab){
+          width: 50%;
+          font-size: 1.5rem;
+          padding: 10rem 2rem;
+          h3 {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+    .project-1 {
+      background: url("../../assets/images/Image_PJ.png")no-repeat;
+    }
+    .project-2 {
+      background: url("../../assets/images/Image_PJ.png")no-repeat;
+    }
+    .project-5 {
+      background: url("../../assets/images/Rectangle109.png")no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      .project-5-text {
+        .view-case {
+          color: #000;
+        }
+      }
+    }
   }
 }
