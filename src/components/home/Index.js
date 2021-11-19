@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { AiFillBehanceSquare, AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
+import { BsCameraReelsFill } from "react-icons/bs";
 import { MdWavingHand } from "react-icons/md";
+import Footer from "../Footer/Footer";
 
 import indexData from "./indexData";
 import './index.scss';
@@ -41,6 +43,26 @@ const Index = () => {
             <Link to={indexData.projects[0].linkTo} target="_blank" className="view-case">View Case Study</Link>
           </div>
         </div>
+        
+        <div className="project project-3">
+          <div className="project-text project-3-text">
+            <p><BsCameraReelsFill color="#F00"/></p>
+            <p>{indexData.projects[2].position}</p>
+            <h3>{indexData.projects[2].title}</h3>
+            <p>{indexData.projects[2].description}</p>
+            <Link to={indexData.projects[2].linkTo} target="_blank" className="view-case">View Case Study</Link>
+          </div>
+          <div className="project-3-image"></div>
+        </div>
+        <div className="project project-4">
+          <div className="project-text project-4-text">
+            <p>{indexData.projects[3].position}</p>
+            <h3>{indexData.projects[3].title}</h3>
+            <p>{indexData.projects[3].description}</p>
+            <Link to={indexData.projects[3].linkTo} target="_blank" className="view-case">View Case Study</Link>
+          </div>
+          <div className="project-4-image"></div>
+        </div>
         <div className="project project-5">
           <div className="project-text project-5-text">
             <p>{indexData.projects[4].position}</p>
@@ -50,6 +72,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   )
 }

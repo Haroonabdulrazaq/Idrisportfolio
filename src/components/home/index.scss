@@ -132,6 +132,9 @@ html {
         width: 60%;
         top: 0;
         padding-right: 10rem;
+        @include responsive(desktop) {
+          width: 50%;
+        }
       }
       .banner-image{
         position: relative;
@@ -181,14 +184,16 @@ html {
       position: relative;
 
       @include responsive(tab) {
-        min-height: 70vh;
+        min-height: 100vh;
       }
       .project-text {
+        // border: 1px solid chartreuse;
         min-height: inherit;
         width: 60%;
         position: absolute;
-        top: 0;
+        top: 0; //label
         left: 0;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -216,13 +221,66 @@ html {
             font-size: 2.5rem;
           }
         }
+        @include responsive(desktop){
+          width: 30%;
+          font-size: 1.8rem;
+          padding: 10rem 2rem;
+          h3 {
+            font-size: 2.8rem;
+          }
+        }
       }
     }
     .project-1 {
       background: url("../../assets/images/Image_PJ.png")no-repeat;
     }
-    .project-2 {
-      background: url("../../assets/images/Image_PJ.png")no-repeat;
+
+    .project-3 {
+      // background: url("../../assets/images/Group.png")no-repeat;
+      background: #000;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      .project-3-text {
+        background: url("../../assets/images/Group.png")no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-clip: padding-box;
+        display: absolute;
+        top: 0;
+        left: 0;
+      }
+      .project-3-image {
+        width: 50%;
+        height: 70%;
+        position: absolute;
+        top: 15vh;
+        right: 8vh;
+        z-index: 0;
+        background: url("../../assets/images/Component3.png")no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-clip: padding-box;
+      }
+    }
+    .project-4 {
+      background: url("../../assets/images/Rectangle3.png")no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      .project-4-image {
+        width: 50%;
+        height: 60%;
+        position: absolute;
+        top: 12vh;
+        right: 2vh;
+        z-index: 0;
+        background: url("../../assets/images/Instagram.png")no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-clip: padding-box;
+        @include responsive(tab){}
+      }
     }
     .project-5 {
       background: url("../../assets/images/Rectangle109.png")no-repeat;
@@ -237,3 +295,32 @@ html {
     }
   }
 }
+
+
+// .project-2 {
+//   min-height: 50vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: 1px solid chartreuse;
+//   background: black;
+
+
+//   @include responsive(tab) {
+//     min-height: 80vh;
+//   }
+//   .project-2-image {
+//     width: 50%;
+//     min-height: inherit;
+//     border: 1px solid chartreuse;
+//     background: url("../../assets/images/Frame8.png")no-repeat;
+//     background-size: contain;
+//     background-position: center;
+//     background-clip: padding-box;
+//   }
+
+//   // .project-2-text {
+//   //   width: 30%;
+//   //   border: 1px solid goldenrod;
+//   // }
+// }
