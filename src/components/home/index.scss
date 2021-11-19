@@ -174,7 +174,6 @@ html {
   .projects {
     height: auto;
     min-height: 200vh;
-    // border: 1px solid chartreuse;
     .project {
       height: auto;
       min-height: 50vh;
@@ -235,8 +234,40 @@ html {
       background: url("../../assets/images/Image_PJ.png")no-repeat;
     }
 
+    .project-2 {
+      background: #F1F1F1;
+      position: relative;
+      .project-2-text {
+        position: absolute;
+        z-index: 1;
+        h3, p {
+          color: #000;
+        }
+        .view-case {
+          color: #000;
+          border: 1px solid #000;
+        }
+      }
+      .project-2-image {
+        width: 50%;
+        height: 70%;
+        position: absolute;
+        top: 10vh;
+        right: 2vh;
+        z-index: 0;
+        background: url("../../assets/images/Frame8.png")no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-clip: padding-box;
+
+        @include responsive(tab) {
+          position: absolute;
+          top: 12vh;
+          right: 2vh;
+        }
+      }
+    }
     .project-3 {
-      // background: url("../../assets/images/Group.png")no-repeat;
       background: #000;
       background-size: cover;
       background-position: center;
@@ -261,6 +292,12 @@ html {
         background-size: cover;
         background-position: center;
         background-clip: padding-box;
+
+        @include responsive(tab) {
+          position: absolute;
+          top: 20vh;
+          right: 8vh;
+        }
       }
     }
     .project-4 {
@@ -279,7 +316,6 @@ html {
         background-size: cover;
         background-position: center;
         background-clip: padding-box;
-        @include responsive(tab){}
       }
     }
     .project-5 {
@@ -295,32 +331,3 @@ html {
     }
   }
 }
-
-
-// .project-2 {
-//   min-height: 50vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border: 1px solid chartreuse;
-//   background: black;
-
-
-//   @include responsive(tab) {
-//     min-height: 80vh;
-//   }
-//   .project-2-image {
-//     width: 50%;
-//     min-height: inherit;
-//     border: 1px solid chartreuse;
-//     background: url("../../assets/images/Frame8.png")no-repeat;
-//     background-size: contain;
-//     background-position: center;
-//     background-clip: padding-box;
-//   }
-
-//   // .project-2-text {
-//   //   width: 30%;
-//   //   border: 1px solid goldenrod;
-//   // }
-// }

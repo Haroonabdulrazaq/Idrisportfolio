@@ -43,7 +43,15 @@ const Index = () => {
             <Link to={indexData.projects[0].linkTo} target="_blank" className="view-case">View Case Study</Link>
           </div>
         </div>
-        
+        <div className="project project-2">
+          <div className="project-text project-2-text">
+            <p>{indexData.projects[1].position}</p>
+            <h3>{indexData.projects[1].title}</h3>
+            <p>{indexData.projects[1].description}</p>
+            <Link to={indexData.projects[1].linkTo} target="_blank" className="view-case">View Case Study</Link>
+          </div>
+          <div className="project-2-image"></div>
+        </div>
         <div className="project project-3">
           <div className="project-text project-3-text">
             <p><BsCameraReelsFill color="#F00"/></p>
