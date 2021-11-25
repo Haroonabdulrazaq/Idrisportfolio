@@ -1,0 +1,38 @@
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+
+.contact{
+  margin: 2rem;
+  padding: 2rem;
+  font-size: medium;
+  border-top: 1px solid $more-grey;
+  display: flex;
+  flex-direction: column;
+  
+  @include responsive(tab){
+    flex-direction: row;
+  }
+}
+@include responsive(tab) {
+  .contact > * {
+    margin: 2rem;
+  }
+}
+
+.work-together {
+  color: $very-grey;
+  text-transform: uppercase;
+}
+
+.icons{
+  color: $more-grey;
+  cursor: pointer;
+  a{
+    color: $more-grey;
+  }
+  a:hover{
+    color: $more-grey;
+    text-decoration: none;
+  }
+}

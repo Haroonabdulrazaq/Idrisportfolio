@@ -1,3 +1,31 @@
-.App {
- border: 1px solid chartreuse; 
+@import './assets/stylesheets/mediaQuery.scss';
+@import './assets/stylesheets/utils.scss';
+@import './assets/stylesheets/flexPoint.scss';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.7;
+  box-sizing: border-box;
+  // background: #eee;
+  // color: $text-grey;
+}
+
+.app {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
 }

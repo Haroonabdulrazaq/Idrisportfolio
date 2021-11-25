@@ -1,0 +1,247 @@
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+ $light-black-background:#131111;
+ $black-background:#070707;
+
+.contact-wrapper {
+  min-height: auto;
+}
+
+.top-contact {
+  min-height: 80vh;
+  color: white;
+  background: $light-black-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .top-contact-text {
+    width: 100%;
+    min-height: 39vh;
+    height: auto;
+    font-family: 'Rationale', sans-serif;
+    font-size: 1.8rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include responsive(tab) {
+      font-size: 2.5rem;
+    }
+    @include responsive(desktop) {
+      font-size: 2.5rem;
+    }
+
+    .wave-hello {
+      color: $orange;
+      cursor: pointer;
+    }
+    .wave-hello:hover {
+      transform: rotate(-60deg);
+      transition: all 0.8s ease-in-out;
+    }
+  }
+
+  .contact-form-wrapper {
+    color: white;
+    width: 100%;
+    min-height: 39vh;
+    padding: 2rem;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-form {
+      .text-field {
+        border: 1px solid white;
+        width: 80vw;
+        color: white;
+        @include responsive(tab){
+          width: 35vw;
+        }
+      }
+      button:hover {
+        transition: all 0.8s;
+        background: $orange;
+        color: white;
+      }
+    }
+    .contact-form > div + div {
+      margin: 2rem 0;
+    }
+  }
+
+  @include responsive(tab) {
+    flex-direction: row;
+    .top-contact-text {
+      width: 60%;
+      height: inherit;
+    }
+    .contact-form-wrapper {
+      width: 40%;
+      height: inherit;
+    }
+  }
+}
+
+
+.bottom-contact {
+  height: auto;
+  min-height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  @include responsive(tab) {
+    flex-direction: row;
+  }
+
+  .hello-text {
+    background: url("../../assets/images/contact-bg.jpeg") no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-clip: padding-box;
+    width: 100%;
+    min-height: inherit;
+
+    @include responsive(tab) {
+      width: 75%;
+      flex-direction: row;
+      background-position: center;
+    }
+
+    .letters {
+      // border: 1px solid cornflowerblue;
+      position: relative;
+      .letter {
+        position: absolute;
+        font-family: 'Roboto Slab', serif;
+        font-size: 4rem;
+        font-weight: 400;
+        @include responsive(tab) {
+          font-size: 10rem;
+        }
+      }
+      .H {
+        top: 20vh;
+        left: 5vw;
+      }
+      .E {
+        top: 20vh;
+        left: 18vw;
+      }
+      .L1 {
+        top: 22vh;
+        left: 38vw;
+      }
+      .L2 {
+        top: 25vh;
+        left: 48vw;
+      }
+      .O {
+        top: 28vh;
+        left: 58vw;
+      }
+      @include responsive(tab){
+        .H {
+          top: 10vh;
+          left: 5vw;
+        }
+        .E {
+          top: 10vh;
+          left: 15vw;
+        }
+        .L1 {
+          top: 12vh;
+          left: 25vw;
+        }
+        .L2 {
+          top: 20vh;
+          left: 38vw;
+        }
+        .O {
+          top: 23vh;
+          left: 45vw;
+        }
+      }
+    }
+  }
+  .social-icons {
+    background: $black-background;
+    width: 100%;
+    height: auto;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 1.5rem;
+      font-family: 'Rationale', sans-serif;
+      line-height: 1.7;
+      padding: 0 0 0 2rem;
+      @include responsive(tab)  {
+        padding: 0;
+      }
+    }
+    @include responsive(tab)  {
+      width: 35%;
+      min-height: 0vh;
+      justify-content: flex-end; 
+      align-items: center;
+    }
+    svg {
+      cursor: pointer;
+    }
+
+    .social-connect-icons {
+      width: 100%;
+      padding: 2rem 0 2rem 2rem;
+      @include responsive(tab) {
+        text-align: center; 
+        padding: 2rem 0;
+      }
+    }
+    .social-connect-icons > a {
+      font-size: 3.5rem;
+      color: $orange;
+    }
+
+    .social-connect-icons > a+a {
+      padding: 0 0.5rem;
+    }
+
+    .contact-me {
+      width: 100%;
+      padding: 2rem 0 2rem 2rem;
+      color: $orange;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      .wave {
+        display: none;
+      }
+      @include responsive(tab) {
+        justify-content: center;
+        align-items: center;
+        .wave {
+          display: block;
+        }
+        .wave:hover {
+          transform: rotate(-60deg);
+          transition: all 0.8s ease-in-out;;
+        }
+      }
+    }
+    .contact-me > p {
+      display: inline-block;
+      padding: 0 1rem;
+    }
+    .contact-me > svg {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,185 @@
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+.nav-wrapper {
+  min-height: 10vh;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  
+  padding: 1rem 2rem;
+  background: #000;
+
+  .mobile-nav-display {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background: white;
+    transition: height 8s;
+    z-index: 5;
+  
+    .mobile-navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  
+      font-size: 2rem;
+      font-family: 'Rationale', sans-serif;
+      text-transform: uppercase;
+      
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        margin: 2rem;
+      }
+      // a+a {
+      //   margin: 2rem;
+      // }
+  
+    }
+  }
+  
+  @include responsive(tab){
+    .mobile-nav-display{
+      display: none;
+    }
+  }
+}
+
+
+
+
+.show-wrapper {
+  transition: top .8s;
+}
+
+.no-wrapper {
+  top: -12vh;
+
+  transition: top 2s;
+}
+
+.mobile-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 2.5rem;
+  color: white;
+  .logo {
+    width: 30%;
+    min-height: 7vh;
+    height: auto;
+    background: url("../../assets/images/Logo.png")no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-clip: padding-box;
+    cursor: pointer;
+  }
+  .mobile-menu {
+    cursor: pointer;
+  }
+  .desktop-menu {
+    display: none;
+  }
+
+  @include responsive(tab) {
+    .mobile-menu {
+      display: none;
+    }
+
+    .desktop-menu {
+      display: block;
+      font-size: 1rem;
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+        padding: 1rem;
+        // border: 1px solid red;
+      }
+      a:hover{
+        // color: $orange;
+        border-bottom: 1px solid white;
+        transition: all 5.8s;
+      }
+    }
+  }
+}
+
+
+// Arrow up Animation
+.arrow-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  z-index: 3;
+  border-radius: 0.5rem;
+  background: $ash;
+  box-shadow: $shadow;
+  transform: scale(1);
+  animation: goUp 2s ease-in-out,
+             bounce 0.8s infinite alternate ease-in-out 2.5s;
+  -webkit-animation: goUp 2s ease-in-out,
+                     bounce 0.8s infinite alternate ease-in-out 2.5s;
+  @include responsive(tab) {
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+  }
+  @include responsive(large-screen) {
+    right: 5rem;
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.arrow-up:hover {
+  color: #000;
+}
+
+@keyframes goUp {
+  0% {
+    bottom: 80rem;
+    transform: scale(1.1);
+  }
+  50% {
+    bottom: 1rem;
+  }
+  100% {
+    bottom: 3rem;
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../assets/stylesheets/flexPoint.scss";
+@import "../../assets/stylesheets/mediaQuery.scss";
+@import "../../assets/stylesheets/utils.scss";
+
+.testimony-wrapper {
+  // width: 100%;
+  min-height: 50vh;
+  margin: 2rem;
+}
+
+.testimony {
+  border-top: 1px solid $more-grey;
+  padding: 5rem;
+  text-align: center;
+}
+
+.testimony-text {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.testimony-name {
+  color: $very-grey;
+  text-transform: uppercase;
+}
