@@ -61,11 +61,21 @@ html {
         background-size: cover;
         background-clip: padding-box;
         // border: 1px solid chartreuse;
+
+        @include responsive(large-screen){
+          // border: 1px solid chartreuse; // label
+          width: 30rem;
+          height: 30rem;
+        }
       }
       .wave {
         font-size: 1.5rem;
         color: $orange;
         cursor: pointer;
+
+        @include responsive(large-screen){
+         font-size: 5rem;
+        }
       }
       .wave:hover {
         transform: rotate(-60deg);
@@ -75,27 +85,47 @@ html {
       h3{
         font-size: 2.5rem;
         line-height: 1.5;
+        @include responsive(large-screen){
+         font-size: 5rem;
+        }
       }
       p{
         font-size: 1.5rem;
         line-height: 1;
         font-family: Overlock;
+        @include responsive(large-screen){
+         font-size: 5rem;
+         line-height: 1.7;
+         margin-top: 5rem;
+        }
       }
 
       .social-icons {
         border-top: 1px solid $ash;
         padding-top: 2rem;
+        // border: 1px solid chartreuse;
+
+        @include responsive(large-screen){
+         width: 25vw;
+         margin-top: 20rem;
+        //  padding: 2rem 10rem;
+        }
       }
       .social-icons > a{
         font-size: 2.5rem;
         color: $ash;
         text-align: left;
+        @include responsive(large-screen){
+          font-size: 10rem;
+        }
       }
 
       .social-icons > a+a {
         padding: 1rem;
       }
-
+      @include responsive(large-screen){
+         font-size: 4.5rem;
+      }
     }
 
     .divider {
@@ -333,5 +363,9 @@ html {
         }
       }
     }
+  }
+
+  @include responsive(large-screen){
+    font-size: 2rem;
   }
 }
