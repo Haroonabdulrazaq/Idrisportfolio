@@ -3,7 +3,9 @@
 
  $light-black-background:#131111;
  $black-background:#070707;
-
+ ::placeholder{
+  color: white;
+}
 .contact-wrapper {
   min-height: auto;
 }
@@ -15,6 +17,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  @include responsive(large-screen) {
+    padding: 0 2rem 0 4rem;
+  }
 
   .top-contact-text {
     width: 100%;
@@ -33,6 +39,9 @@
     }
     @include responsive(desktop) {
       font-size: 2.5rem;
+    }
+    @include responsive(large-screen) {
+      font-size: 8rem;
     }
 
     .wave-hello {
@@ -62,11 +71,39 @@
         @include responsive(tab){
           width: 35vw;
         }
+        @include responsive(large-screen){
+          width: 50vw;
+        }
       }
       button:hover {
         transition: all 0.8s;
         background: $orange;
         color: white;
+      }
+      @include responsive(large-screen){
+        width: 40vw;
+        min-height: 60vh;
+        padding: 2rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        div > input {
+          min-height: 5vh;
+          padding: 2rem;
+          font-size: 5rem;
+        }
+        div > textarea {
+          font-size: 5rem;
+          min-height: 10vh;
+          padding: 2rem;
+        }
+         button {
+          min-height: 5vh;
+          padding: 2rem;
+          font-size: 5rem;
+        }
       }
     }
     .contact-form > div + div {
