@@ -219,7 +219,6 @@ html {
         height: auto;
       }
       .project-text {
-        // border: 1px solid chartreuse;
         min-height: inherit;
         height: auto;
         width: 60%;
@@ -227,6 +226,7 @@ html {
         top: 0; //label
         left: 0;
         z-index: 1;
+
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -234,8 +234,14 @@ html {
         padding: 5rem 2rem;
         font-size: 1rem;
         color: white;
+        border: 1px solid chartreuse;
+        
         h3{
           font-size: 1.7rem;
+          
+          @include responsive(large-screen){
+            font-size: 4rem;
+          }
         }
         .view-case {
           text-decoration: none;
@@ -244,6 +250,10 @@ html {
           color: white;
           text-transform: uppercase;
           font-size: 1rem;
+          @include responsive(large-screen){
+            font-size: 3rem;
+            padding: 2rem 3rem;
+          }
         }
 
         @include responsive(tab){
@@ -262,10 +272,27 @@ html {
             font-size: 2.8rem;
           }
         }
+        @include responsive(large-screen){
+          width: 50%;
+          padding: 5rem 2rem 5rem 5rem;
+          h3 {
+            font-size: 8rem;
+          }
+          p {
+            font-size: 5rem;
+          }
+        }
+      }
+      @include responsive(large-screen){
+        min-height: 100vh;
       }
     }
     .project-1 {
       background: url("../../assets/images/Image_PJ.png")no-repeat;
+      @include responsive(large-screen){
+        background-size: cover;
+        background-position: center;
+      }
     }
 
     .project-2 {
