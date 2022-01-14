@@ -13,6 +13,11 @@
   @include responsive(tab){
     flex-direction: row;
   }
+  @include responsive(large-screen){
+    h2 {
+      font-size: 5rem;
+    }
+  }
 }
 @include responsive(tab) {
   .contact > * {
@@ -23,6 +28,10 @@
 .work-together {
   color: $very-grey;
   text-transform: uppercase;
+
+  @include responsive(large-screen){
+    font-size: 5rem;
+  }
 }
 
 .icons{
@@ -34,5 +43,10 @@
   a:hover{
     color: $more-grey;
     text-decoration: none;
+  }
+  @include responsive(large-screen){
+    a{
+      font-size: 5rem;
+    }
   }
 }

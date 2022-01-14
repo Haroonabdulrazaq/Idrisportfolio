@@ -17,8 +17,16 @@
 .testimony-text {
   margin-bottom: 1rem;
   font-size: 1.5rem;
+
+  @include responsive(large-screen){
+    font-size: 5rem;
+  }
 }
 .testimony-name {
   color: $very-grey;
   text-transform: uppercase;
+
+  @include responsive(large-screen){
+    font-size: 3.5rem;
+  }
 }

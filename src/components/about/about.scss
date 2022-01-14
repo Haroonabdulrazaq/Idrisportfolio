@@ -47,6 +47,9 @@
           width: 60%;
           margin: 0 auto;
         }
+        @include responsive(large-screen)  {
+          font-size: 8rem;
+        }
       }
     }
   }
@@ -56,8 +59,13 @@
     color: $very-grey;
     font-family: 'Rationale', sans-serif;
     font-weight: 400;
+    // border: 1px solid chartreuse;
+    @include responsive(large-screen){
+      width: 20vw;
+    }
   }
   .main-parent {
+    // border: 1px solid red;
     @include responsive(tab) {
       padding: 3rem;
     }
@@ -103,15 +111,17 @@
         }
         .desc-text {
           display: none;
-         @include responsive(tab) {
-          display: block;
-          width: 100%;
-          margin: 0 auto;
-        }
-        @include responsive(desktop) {
-          width: 100%;
-          padding: 0;
-        }
+          @include responsive(tab) {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+          }
+          @include responsive(desktop) {
+            padding: 0;
+          }
+          @include responsive(large-screen) {
+            font-size: 3rem;
+          }
         }
       }
       .text-desc {
@@ -123,8 +133,9 @@
           text-align: left;
           color: $very-grey;
           padding: 2rem 0;
-          @include responsive(tab){
-            padding: 0;
+
+          @include responsive(large-screen) {
+            font-size: 5rem;
           }
         }
 
@@ -139,6 +150,7 @@
             font-family: 'Rationale', sans-serif;
             font-weight: 400;
             padding: 2rem;
+            
             @include responsive(tab){
               padding: 0;
             }
@@ -148,6 +160,10 @@
             text-align: center;
             color: $more-grey;
             text-align: left;
+            @include responsive(large-screen) {
+              font-size: 3.5rem;
+              padding: 0 2rem;
+            }
           }
         }
       }
@@ -156,12 +172,15 @@
         flex-direction: column;
         justify-content: space-between;
         min-height: 50vh;
-        padding: 0 1.5rem;
         font-size: 1.5rem;
         @include responsive(tab) {
           font-size: 1rem;
           align-items: center;
           margin-bottom: 2rem;
+        }
+        @include responsive(large-screen) {
+          padding: 0 0.5rem;
+          font-size: 3rem;
         }
         .cap {
           margin: 2rem 0;
