@@ -40,7 +40,6 @@ html {
       top: 15vh;
       left: 2vh;
       z-index: 2;
-      // border: 1px solid chartreuse;
       background: rgba($color: #000000, $alpha: 0.8);
       font-family: 'Roboto Slab', serif;
       color: white;
@@ -60,10 +59,8 @@ html {
         background-position: center;
         background-size: cover;
         background-clip: padding-box;
-        // border: 1px solid chartreuse;
 
         @include responsive(large-screen){
-          // border: 1px solid chartreuse; // label
           width: 30rem;
           height: 30rem;
         }
@@ -103,15 +100,13 @@ html {
       .social-icons {
         border-top: 1px solid $ash;
         padding-top: 2rem;
-        // border: 1px solid chartreuse;
 
         @include responsive(large-screen){
          width: 25vw;
          margin-top: 20rem;
-        //  padding: 2rem 10rem;
         }
       }
-      .social-icons > a{
+      .social-icons > a {
         font-size: 2.5rem;
         color: $ash;
         text-align: left;
@@ -130,7 +125,6 @@ html {
 
     .divider {
       border: 2px solid $very-grey;
-      // background: chartreuse;
       width: 30%;
       height: 15vh;
       position: absolute;
@@ -233,9 +227,7 @@ html {
         align-items: flex-start;
         padding: 5rem 2rem;
         font-size: 1rem;
-        color: white;
-        border: 1px solid chartreuse;
-        
+        color: white;        
         h3{
           font-size: 1.7rem;
           
@@ -387,6 +379,7 @@ html {
       .project-5-text {
         .view-case {
           color: #000;
+          border: 1px solid #000;
         }
       }
     }

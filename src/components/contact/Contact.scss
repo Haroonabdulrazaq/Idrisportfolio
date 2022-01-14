@@ -173,11 +173,11 @@
   .social-icons {
     background: $black-background;
     width: 100%;
-    height: auto;
     min-height: 25vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-
+    
     p {
       font-size: 1.5rem;
       font-family: 'Rationale', sans-serif;
@@ -186,11 +186,14 @@
       @include responsive(tab)  {
         padding: 0;
       }
+      @include responsive(large-screen) {
+        font-size: 5rem;
+      }
     }
-    @include responsive(tab)  {
+    @include responsive(tab) {
       width: 35%;
       min-height: 0vh;
-      justify-content: flex-end; 
+      justify-content: flex-end;
       align-items: center;
     }
     svg {
@@ -204,14 +207,24 @@
         text-align: center; 
         padding: 2rem 0;
       }
+      @include responsive(large-screen) {
+        font-size: 10rem;
+        padding: 0rem;
+      }
     }
     .social-connect-icons > a {
       font-size: 3.5rem;
       color: $orange;
+      @include responsive(large-screen){
+        font-size: 10rem;
+      }
     }
 
     .social-connect-icons > a+a {
       padding: 0 0.5rem;
+      @include responsive(large-screen){
+        padding: 0 2rem;
+      }
     }
 
     .contact-me {
@@ -233,6 +246,14 @@
         .wave:hover {
           transform: rotate(-60deg);
           transition: all 0.8s ease-in-out;;
+        }
+      }
+      @include responsive(large-screen){
+        .smile{
+          font-size: 5rem;
+        }
+        .wave {
+          font-size: 5rem;
         }
       }
     }
