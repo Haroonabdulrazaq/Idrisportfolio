@@ -41,7 +41,7 @@
       font-size: 2.5rem;
     }
     @include responsive(large-screen) {
-      font-size: 8rem;
+      font-size: 7rem;
     }
 
     .wave-hello {
@@ -90,19 +90,19 @@
         justify-content: flex-end;
 
         div > input {
-          min-height: 5vh;
+          min-height: 4vh;
           padding: 2rem;
-          font-size: 5rem;
+          font-size: 4rem;
         }
         div > textarea {
-          font-size: 5rem;
-          min-height: 10vh;
+          font-size: 4rem;
+          min-height: 8vh;
           padding: 2rem;
         }
          button {
           min-height: 5vh;
           padding: 2rem;
-          font-size: 5rem;
+          font-size: 4rem;
         }
       }
     }
@@ -224,7 +224,7 @@
         padding: 0;
       }
       @include responsive(large-screen) {
-        font-size: 5rem;
+        font-size: 4rem;
       }
     }
     @include responsive(tab) {
@@ -253,7 +253,7 @@
       font-size: 3.5rem;
       color: $orange;
       @include responsive(large-screen){
-        font-size: 10rem;
+        font-size: 8rem;
       }
     }
 
@@ -287,10 +287,10 @@
       }
       @include responsive(large-screen){
         .smile{
-          font-size: 5rem;
+          font-size: 4rem;
         }
         .wave {
-          font-size: 5rem;
+          font-size: 4rem;
         }
       }
     }
