@@ -71,7 +71,7 @@ html {
         cursor: pointer;
 
         @include responsive(large-screen){
-         font-size: 5rem;
+         font-size: 4rem;
         }
       }
       .wave:hover {
@@ -83,7 +83,7 @@ html {
         font-size: 2.5rem;
         line-height: 1.5;
         @include responsive(large-screen){
-         font-size: 5rem;
+         font-size: 4rem;
         }
       }
       p{
@@ -91,7 +91,7 @@ html {
         line-height: 1;
         font-family: Overlock;
         @include responsive(large-screen){
-         font-size: 5rem;
+         font-size: 4rem;
          line-height: 1.7;
          margin-top: 5rem;
         }
@@ -111,7 +111,7 @@ html {
         color: $ash;
         text-align: left;
         @include responsive(large-screen){
-          font-size: 10rem;
+          font-size: 8rem;
         }
       }
 
@@ -119,7 +119,7 @@ html {
         padding: 1rem;
       }
       @include responsive(large-screen){
-         font-size: 4.5rem;
+         font-size: 3.5rem;
       }
     }
 
@@ -232,7 +232,7 @@ html {
           font-size: 1.7rem;
           
           @include responsive(large-screen){
-            font-size: 4rem;
+            font-size: 3rem;
           }
         }
         .view-case {
@@ -243,8 +243,8 @@ html {
           text-transform: uppercase;
           font-size: 1rem;
           @include responsive(large-screen){
-            font-size: 3rem;
-            padding: 2rem 3rem;
+            font-size: 2rem;
+            padding: 1.5rem 2rem;
           }
         }
 
@@ -268,15 +268,15 @@ html {
           width: 50%;
           padding: 5rem 2rem 5rem 5rem;
           h3 {
-            font-size: 8rem;
+            font-size: 7rem;
           }
           p {
-            font-size: 5rem;
+            font-size: 4rem;
           }
         }
       }
       @include responsive(large-screen){
-        min-height: 100vh;
+        min-height: 80vh;
       }
     }
     .project-1 {
@@ -386,6 +386,6 @@ html {
   }
 
   @include responsive(large-screen){
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
